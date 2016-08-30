@@ -22,11 +22,12 @@ var PageNav = function(a$PosId,s$NavClass,Header){
         })
 
         // Circle$对象和Nav$对象的数组
-        console.log(a$PosId)
+
         a$PosId.forEach(function ($id) {
-            self.aPosition.push($('#' + $id).offset().top-404)
+            self.aPosition.push($('#' + $id).offset().top)
         })
 
+        console.log(self.aPosition)
 
         //aPosition 是所有版块位置的数组
 
@@ -119,7 +120,7 @@ var PageNav = function(a$PosId,s$NavClass,Header){
         $(window).scroll(function () {
             self.checkAdd();
         })
-        
+
         // 绑定滚动事件
 
 
