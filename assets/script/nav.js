@@ -24,7 +24,9 @@ var PageNav = function(a$PosId,s$NavClass,Header){
         // Circle$对象和Nav$对象的数组
 
         a$PosId.forEach(function ($id) {
+          setTimeout(function(){
             self.aPosition.push($('#' + $id).offset().top)
+          })
         })
 
         console.log(self.aPosition)
